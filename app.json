@@ -4,10 +4,10 @@
     "slug": "chess",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/favicon.svg",
+    "icon": "./assets/images/favicon.png",
     "scheme": "myapp",
     "splash": {
-      "image": "./assets/images/favicon.svg",
+      "image": "./assets/images/favicon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -19,7 +19,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/favicon.svg",
+        "foregroundImage": "./assets/images/favicon.png",
         "backgroundColor": "#ffffff"
       },
       "package": "com.feras123.testlatest"
@@ -27,13 +27,13 @@
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/favicon.svg"
+      "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
       [
         "expo-notifications",
         {
-          "icon": "./assets/images/favicon.svg",
+          "icon": "./assets/images/favicon.png",
           "color": "#0000ff",
           "defaultChannel": "default",
           "sounds": [
@@ -83,7 +83,7 @@
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/favicon.svg",
+          "image": "./assets/images/favicon.png",
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
