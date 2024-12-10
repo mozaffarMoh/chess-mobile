@@ -19,7 +19,8 @@ const LabelsColumn = () => {
 
 const styles = StyleSheet.create({
   labelsColumnContainer: {
-    width: 43, // Full width of the container
+    width: '12%', // Full width of the container
+    height:30,
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "row", // Items stack vertically

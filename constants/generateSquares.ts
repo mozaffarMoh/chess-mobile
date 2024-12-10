@@ -13,7 +13,7 @@ export const generateSquares = () => {
             const pieceColor = label.includes("1") || label.includes("2") ? 'white' : label.includes("7") || label.includes("8") ? "black" : ""
             squares.push({
                 label,
-                color: isEvenSquare ? "bg-slate-300" : "bg-slate-600",
+                color: isEvenSquare ? "white" : "black",
                 piece: { name: initialPositions[label] || null, color: pieceColor },
             })
         }

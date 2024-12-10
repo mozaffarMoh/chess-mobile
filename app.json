@@ -3,11 +3,10 @@
     "name": "Chess",
     "slug": "chess",
     "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/images/favicon.png",
+    "icon": "./assets/favicon.png",
     "scheme": "myapp",
     "splash": {
-      "image": "./assets/images/favicon.png",
+      "image": "./assets/favicon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -19,7 +18,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/favicon.png",
+        "foregroundImage": "./assets/favicon.png",
         "backgroundColor": "#ffffff"
       },
       "package": "com.feras123.testlatest"
@@ -27,13 +26,19 @@
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/favicon.png"
     },
     "plugins": [
       [
+        "expo-av",
+        {
+          "microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone."
+        }
+      ],
+      [
         "expo-notifications",
         {
-          "icon": "./assets/images/favicon.png",
+          "icon": "./assets/favicon.png",
           "color": "#0000ff",
           "defaultChannel": "default",
           "sounds": [
@@ -83,7 +88,7 @@
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/favicon.png",
+          "image": "./assets/favicon.png",
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
@@ -105,7 +110,7 @@
     },
     "runtimeVersion": {
       "policy": "appVersion"
-    }, 
+    },
     "updates": {
       "url": "https://u.expo.dev/b1a0aff2-174b-40ef-ab38-b5733680629e"
     }
