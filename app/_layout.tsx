@@ -10,34 +10,34 @@ import Board from "@/components/Board";
 import ReturnArrows from "@/components/ReturnArrows";
 
 export default function RootLayout() {
-  const { width, height } = Dimensions.get("window");
+  const { height } = Dimensions.get("window");
 
   return (
     <Provider store={store}>
-      <SafeAreaView style={styles.container} >
-        <ScrollView contentContainerStyle={styles.container}>
-          <LabelsRow />
+      <SafeAreaView style={styles.container}>
+        <ScrollView contentContainerStyle={styles.scrollContent}>
+          <View style={styles.rowsWithColumnsContainer}>
+            <LabelsRow />
 
-          <View style={styles.containerChild}>
-            <LabelsColumn />
-            <View
-              style={{
-                width: "100%",
-                height: height / 2,
-                backgroundColor: "black",
-              }}
-            >
-              <Board />
+            <View style={styles.containerChild}>
+              <LabelsColumn />
+              <View
+                style={{
+                  width: "100%",
+                  height: height / 2,
+                  backgroundColor: "black",
+                }}
+              >
+                <Board />
+              </View>
+              <LabelsColumn />
             </View>
-
-            <LabelsColumn />
+            <LabelsRow />
           </View>
 
-          <LabelsRow />
+          {/* Return Arrows */}
+          <ReturnArrows />
         </ScrollView>
-
-        {/* Arrows */}
-        <ReturnArrows />
       </SafeAreaView>
     </Provider>
   );
@@ -45,26 +45,20 @@ export default function RootLayout() {
 
 const styles = StyleSheet.create({
   container: {
-    flex:1,
-    justifyContent : 'flex-start',
-    width: "100%", 
-    height: "100%",
-    ...customStyles.flexCenter,
+    flex: 1,
     backgroundColor: "#333333",
+  },
+  scrollContent: {
+    justifyContent: "flex-start",
+    alignItems: "center",
+  },
+  rowsWithColumnsContainer: {
+    marginTop:100,
+    ...customStyles.flexCenter,
   },
   containerChild: {
     width: "85%",
     ...customStyles.flexCenterColumn,
     marginBottom: 35,
-  },
-  retryButton: {
-    backgroundColor: "#1e4775",
-    padding: 10,
-    borderRadius: 5,
-    marginTop: 20,
-  },
-  retryButtonText: {
-    color: "white",
-    fontWeight: "bold",
   },
 });

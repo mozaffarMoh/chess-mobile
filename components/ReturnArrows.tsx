@@ -2,13 +2,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { decreaseCount, increaseCount } from "../Slices/returnMovesCount";
 import { RootType } from "../store";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { Button, Dimensions, View } from "react-native";
+import { Button, View, StyleSheet } from "react-native";
 import { customStyles } from "@/constants/styles";
 import * as Updates from "expo-updates";
 
 const ReturnArrows = () => {
   const dispatch = useDispatch();
-  const { width, height } = Dimensions.get("window");
   const squaresSlice = useSelector((state: RootType) => state.moves.data);
   const returnMovesCount = useSelector(
     (state: RootType) => state.returnMovesCount.value
@@ -31,18 +30,8 @@ const ReturnArrows = () => {
   };
 
   return (
-    <View
-      style={[
-        {
-          position: "absolute",
-          bottom: height - (height - 10),
-          left: width - width / 1.7,
-          gap:20,
-        },
-        customStyles.flexCenterColumn,
-      ]}
-    >
-      <View style={[customStyles.flexCenter, { gap: 20 }]}>
+    <View style={[styles.container, customStyles.flexCenterColumn]}>
+      <View style={[customStyles.flexCenter, styles.iconContainer]}>
         <MaterialCommunityIcons
           name="step-backward"
           size={32}
@@ -60,5 +49,15 @@ const ReturnArrows = () => {
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    marginVertical: 20,
+    gap: 10,
+  },
+  iconContainer: {
+    gap: 20,
+  },
+});
 
 export default ReturnArrows;

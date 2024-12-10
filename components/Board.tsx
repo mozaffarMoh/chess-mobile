@@ -198,12 +198,13 @@ const Board = () => {
     </View>
   );
 };
-const { width, height } = Dimensions.get("window");
-console.log(width, height);
+
+// const { width, height } = Dimensions.get("window");
+// console.log(width, height);
 
 const styles = StyleSheet.create({
   board: {
-    backgroundColor: "black",
+    backgroundColor: "#333333",
     flex: 1,
     flexDirection: "row",
     flexWrap: "wrap",
